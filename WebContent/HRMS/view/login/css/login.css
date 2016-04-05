@@ -1,0 +1,67 @@
+body{
+    margin: 0 0;
+    padding: 0 0;
+}
+.login_bg{
+    background-image: url("../img/login.jpg");
+    height:675px;
+    background-size: 100% 100%;
+}
+.login_box{
+    position: absolute;
+    width: 500px;
+    height: 280px;
+    background: #8B8D92;
+    box-shadow: 5px 5px 5px #000000;
+    left: 50%;
+    top: 50%;
+    margin-top: -140px;
+    margin-left: -250px;
+}
+.title{
+    width:500px;
+    height: 110px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: bold;
+    /*text-shadow:#262829;*/
+}
+.login{
+    width: 500px;
+    height: 160px;
+    text-align: center;
+}
+.info_box{
+    height: 40px;
+}
+.name_label, .pass_label{
+    font-size: 18px;
+    font-family: "Microsoft Yahei", "微软雅黑";
+}
+.input{
+    width: 200px;
+    height: 30px;
+    border: none;
+}
+.submit_box{
+    position:relative;
+    height: 40px;
+    width: 250px;
+    margin: 0 auto;
+    left: 61px;
+}
+.button{
+    width: 70px;
+    height: 35px;
+    border: none;
+    background-color: #0088cc;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+.button:hover{
+    background-color:#1D72CC;
+}

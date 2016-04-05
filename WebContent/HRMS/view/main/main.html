@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人力资源管理系统</title>
+    <script src="../../js/jquery/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="../../js/bootstrap/css/bootstrap.css">
+    <script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../js/bootstrap/css/bootstrap-treeview.css">
+    <script src="../../js/bootstrap/js/bootstrap-treeview.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!--导航条-->
+    <nav class="nav navbar-inverse">
+        <div class="navbar-header system_name">
+            <a href="#" class="navbar-brand">人力资源管理系统</a>
+        </div>
+        <div >
+            <ul class="nav navbar-nav tab_box">
+                <li><a href="#">我的主页</a></li>
+                <li><a href="#">业务系统</a></li>
+                <li><a href="#">系统管理</a></li>
+                <li><a href="#">公司文化</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+            <span class="user">欢迎您：盐粒儿</span>
+        </div>
+    </nav>
+     <!--main-->
+    <div class="container">
+        <div class="row">
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <!--我的主页-->
+                <ul class="main-nav nav nav-tabs nav-stacked personal">
+                    <li>
+                        <a href="#account" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-user"></i>
+                            个人中心
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="account" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i>修改信息</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>查看信息</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./plans.html">
+                            <i class="glyphicon glyphicon-bell"></i>
+                            待读消息 <span class="label label-warning pull-right">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./plans.html">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            公告阅读
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./grid.html">
+                            <i class="glyphicon glyphicon-hand-right"></i>
+                            待办任务
+                            <span class="label label-warning pull-right">5</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./grid.html">
+                            <i class="glyphicon glyphicon-th-list"></i>
+                            工作计划
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="./grid.html">
+                            <i class="glyphicon glyphicon-file"></i>
+                            工作报告
+                        </a>
+                    </li>
+                </ul>
+                <ul class="main-nav nav nav-tabs nav-stacked business">
+                    <li>
+                        <a href="#person" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            人事档案管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="person" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                            <li id="personal"><a href="#"><i class="glyphicon glyphicon-user"></i>人事档案</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>人事调动</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>奖励记录</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>惩罚记录</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#attendance" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            考勤管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="attendance" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>加班管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>请假管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>出差管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i>出勤违纪</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#train" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            培训管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul  id="train" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#salary" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            薪资管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="salary" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="main-nav nav nav-tabs nav-stacked system">
+                    <li>
+                        <a href="#basics" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            基础数据管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="basics" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>人事调动</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>奖励记录</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>惩罚记录</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#department" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            部门管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="department" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>加班管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>请假管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>出差管理</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i>出勤违纪</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#post" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            岗位管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul  id="post" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#duty" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            职务管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="duty" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#role" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            角色管理
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="role" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#permission" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            权限分配
+                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul id="permission" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#permission" class="nav-header collapsed" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            日志管理
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <div id="tree"></div>
+            </div>
+            <div class="col-md-8">
+                <div id="content">dsds</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
