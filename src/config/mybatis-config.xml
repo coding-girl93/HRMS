@@ -3,9 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="User" type="com.model.User"/>
+		<typeAlias alias="Employee" type="com.model.Employee"/>
 	</typeAliases>
 	<mappers>
-		<mapper resource="com/mapper/userMapper.xml" />
+		<mapper resource="com/mapper/Employee.xml" />		
 	</mappers>
 </configuration>
