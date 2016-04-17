@@ -4,7 +4,7 @@ body{
 }
 .login_bg{
     background-image: url("../img/login.jpg");
-    height:675px;
+    height:620px;
     background-size: 100% 100%;
 }
 .login_box{
@@ -35,6 +35,15 @@ body{
 }
 .info_box{
     height: 40px;
+}
+.error{
+    height: 30px;
+    color: #ff0000;
+    font-size: 14px;
+    /* line-height: 40px; */
+    width: 380px;
+    text-align: right;
+    display: none;
 }
 .name_label, .pass_label{
     font-size: 18px;

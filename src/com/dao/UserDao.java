@@ -1,9 +1,8 @@
 package com.dao;
 
-import java.util.List;
+import com.entity.User;
 
-import com.model.User;
-
-public interface UserDao {
-	List<User> findAllUser();
+public interface UserDao{
+	
+	public void add(User user);
 }

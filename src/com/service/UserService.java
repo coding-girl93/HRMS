@@ -1,9 +1,8 @@
 package com.service;
 
-import java.util.List;
-
-import com.model.User;
+import com.entity.User;
 
 public interface UserService {
-	List<User> findAllUser();
+	
+	 public void addUser(User user);
 }
