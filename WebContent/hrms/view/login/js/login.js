@@ -29,19 +29,24 @@ function isNotEmpty(name,password){
 }
 //判断用户是否存在
 function isExit(name,password){
-    var info={'id':1,'name':name,'password':password};
-    $.ajax({
-    	type:'post',
-        url:'/HRMS/User/addUser',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: JSON.stringify(info),
-        success: function(data) {
-            //返回的数据用data.d获取内容
-            alert('22');
-        },
-        error: function(err) {
-            alert('error');
-        }
-    });
+    var loginer={'name':name,'password':password};
+//    $.ajax({//此方法只适合get方法不适用post
+//    	type:'get',
+//        url:'/HRMS/User/addUser.action',
+//        contentType: "application/json; charset=utf-8",
+//        dataType: "json",
+//        data: {name:"dsds"},
+//        success: function(data) {
+//            //返回的数据用data.d获取内容
+//            alert('22');
+//        },
+//        error: function(err) {
+//            alert('error');
+//        }
+//    });
+    
+    $.post("/HRMS/Login/validate.action",{'name':name,'password':password},function(data)
+      {
+       alert("dsd");
+      })
 }

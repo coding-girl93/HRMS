@@ -3,31 +3,38 @@ package com.action;
  
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Namespace;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.entity.User;
 import com.service.UserService;
 
 
 @Action(value="/User")
-@RequestMapping("/User")
 @Controller
-
-public class UserAction {
+public class UserAction{
 
 	@Resource(name = "userServiceImpl")
 	private UserService userService;
 	
-	public void addUser(User user){
-		System.out.print("dsd");
+	@Action(value="addUser")
+	public void addUser(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+        String name = request.getParameter("name");
+        //JSONObject user = new JSONObject(userStr);  
+        
+		System.out.print("dsd:"+name);
 		try{
-			this.userService.addUser(user);
+//			this.userService.addUser(user);
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
 	}
+	
 }
